@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/hello_world"
+        tools:context=".MagicMirrorActivity" />
+
+    <TabHost android:id="@+id/tabHost" android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:layout_weight="1">
+  <!-- 水平方向的Tab -->
+  <LinearLayout android:orientation="horizontal"
+   android:layout_width="fill_parent" android:layout_height="fill_parent">
+   <!-- Tab标签控件 注意ID的方式-->
+   <TabWidget android:id="@android:id/tabs"
+    android:layout_height="wrap_content" android:layout_width="wrap_content"
+    android:layout_weight="0" />
+    
+   <!-- Tab 内容控件 注意ID的方式-->
+   <FrameLayout android:id="@android:id/tabcontent"
+    android:layout_height="fill_parent" android:layout_width="0dip"
+    android:layout_weight="1">
+    <!-- 使用垂直与水平ScrollView -->
+    <HorizontalScrollView android:layout_width="wrap_content"
+     android:layout_height="fill_parent" android:fillViewport="true">
+     <LinearLayout android:id="@+id/id_tab_view1" android:orientation="horizontal"
+      android:layout_width="fill_parent" android:layout_height="fill_parent">
+      
+      <ImageView android:layout_width="wrap_content"
+       android:layout_height="wrap_content" android:layout_gravity="center_horizontal|center_vertical"
+       android:src="@drawable/coef_21_30" />
+      
+    <Gallery
+        android:id="@+id/galleryHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp" />
+      
+     </LinearLayout>
+    </HorizontalScrollView>
+    <HorizontalScrollView android:layout_width="wrap_content"
+     android:layout_height="fill_parent" android:fillViewport="true">
+     <LinearLayout android:id="@+id/id_tab_view2" android:orientation="horizontal"
+      android:layout_width="fill_parent" android:layout_height="fill_parent">
+      
+      <ImageView android:layout_width="wrap_content"
+       android:layout_height="wrap_content" android:layout_gravity="center_horizontal|center_vertical"
+       android:src="@drawable/coef_31_40" />
+     </LinearLayout>
+    </HorizontalScrollView>
+    <HorizontalScrollView android:id="@+id/id_tab_view3" android:layout_width="wrap_content"
+     android:layout_height="fill_parent" android:fillViewport="true">
+     <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent" android:layout_height="fill_parent">
+      
+      <ImageView android:layout_width="wrap_content"
+       android:layout_height="wrap_content" android:layout_gravity="center_horizontal|center_vertical"
+       android:src="@drawable/coef_41_50" />
+     </LinearLayout>
+    </HorizontalScrollView>
+    <HorizontalScrollView android:id="@+id/id_tab_view4" android:layout_width="wrap_content"
+     android:layout_height="fill_parent" android:fillViewport="true">
+     <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent" android:layout_height="fill_parent">
+      
+      <ImageView android:layout_width="wrap_content"
+       android:layout_height="wrap_content" android:layout_gravity="center_horizontal|center_vertical"
+       android:src="@drawable/coef_51_60" />
+     </LinearLayout>
+    </HorizontalScrollView>
+   </FrameLayout>
+  </LinearLayout>
+ </TabHost>
+
+</RelativeLayout>

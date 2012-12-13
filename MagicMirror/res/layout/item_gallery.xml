@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- background image -->
+    <ImageView
+        android:id="@+id/item_gallery_backimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/coef_21_30"
+        android:contentDescription="@string/app_name" />
+  
+
+    <!-- nick name -->
+    <TextView
+        android:id="@+id/textFriendName"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-4dp"
+        android:gravity="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="12sp" 
+        android:singleLine="true" 
+        android:ellipsize="end" 
+        android:width="58dp"
+        android:background="@drawable/text_transparent_border"
+      >
+        
+        
+    </TextView>
+
+    <!-- invite button -->
+    <ImageButton
+        android:id="@+id/item_gallery_invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textFriendName"
+        android:layout_marginBottom="-1dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name" 
+        android:visibility="gone"/>
+
+</RelativeLayout>
